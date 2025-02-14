@@ -1,8 +1,178 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Trang chủ";
 }
----
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="initial-scale=1, width=device-width">
+  	<link rel="stylesheet"  href="/css/home.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&display=swap" />
+</head>
+<body>
+  	<div class="home">
+		<div class="banner-slider">
+			<div class="slides">
+				<div class="slide"><img src="/images/slide1.png" alt="Slide 1"></div>
+				<div class="slide"><img src="/images/slide2.jpg" alt="Slide 2"></div>
+				<div class="slide"><img src="/images/slide3.png" alt="Slide 3"></div>
+				<div class="slide"><img src="/images/slide4.png" alt="Slide 4"></div>
+				<div class="slide"><img src="/images/slide5.jpg" alt="Slide 5"></div>
+			</div>
+			<div class="dots"></div>
+			<script src="/js/bannerSlider.js"></script>
+		</div>
+		<div class="trangSucGiamGia">
+			<div class="sanPhamGiamGia">
+				<img class="imgGiamGia" alt="" src="/images/giamGia1.png">
+				<div class="textGiamGia">Chó Cảnh</div>
+				<div class="discount">Giảm ngay 15%</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+			<div class="sanPhamGiamGia">
+				<img class="imgGiamGia" alt="" src="/images/giamGia2.jpeg">
+				<div class="textGiamGia">Mèo cảnh</div>
+				<div class="discount">Giảm ngay 15%</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+			<div class="sanPhamGiamGia">
+				<img class="imgGiamGia" alt="" src="/images/giamGia3.jpg">
+				<div class="textGiamGia">Phụ kiện thú cưng</div>
+				<div class="discount">Giảm ngay 15%</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+		</div>
+		<div class="goiY-1">
+			<div class="goiY-1-tieuDe">Chó 🐶🎉 </div>
+			<div class="goiY-1-moTa">Những "cục bông biết vẫy đuôi" với siêu năng lực khiến con người cười không kiểm soát! Chúng có thể biến một ngày tồi tệ thành một cuộc phiêu lưu vui nhộn chỉ bằng một cú liếm hoặc một pha chạy vòng vòng vô định!</div>
+			<img class="goiY-1-img1" alt="" src="/images/GoiY-cho1.jpg">
+			<img class="goiY-1-img2" alt="" src="/images/goiY-cho2.jpg">
+			<div class="goiY-1-xemThem">XEM THÊM</div>
+		</div>
+		
+		<div class="kimCuongGIA">
+			<img class="kimCuongGIA-img1" alt="" src="/images/GIA.png">
+			<div class="kimCuongGIA-tieuDe">Về chúng tôi</div>
+			<div class="kimCuongGIA-moTa">ShopPNP được sáng lập và điều hành bởi ba người bạn có chung niềm đam mê với thú cưng: Phương, Nghĩa và Phát. Với mong muốn giúp ShopPNP trở thành điểm đến tin cậy cho những người yêu động vật.</div>
+			<div class="kimCuongGIA-xemThem">XEM THÊM</div>
+    	</div>
+		<div class="goiY-2">
+			<div class="goiY-2-tieuDe">Mèo 🐱👑 </div> 
+			<div class="goiY-2-moTa">Mèo là những "hoàng thượng" lông xù với khả năng điều khiển con sen chỉ bằng một ánh mắt! Ban ngày chúng ngủ như bá chủ thế giới, ban đêm lại tổ chức giải đua marathon trên nóc tủ mà chẳng cần ai cổ vũ!</div>
+			<img class="goiY-2-img1" alt="" src="/images/goiY-2-meo.jpg">
+			<img class="goiY-2-img2" alt="" src="/images/goiY-2-meo2.jpg">
+			<div class="goiY-2-xemThem">XEM THÊM</div>
+		</div>
+		<div class="BSTMoi">
+			<div class="BSTMoi-tieuDe">Khám phá bộ sưu tập mới</div>
+			<div class="BSTMoi-sanPham">
+				<img class="BSTMoi-imgSanPham" alt="" src="/images/BSTMoi-imgSanPham-2.jpg">
+				<div class="BSTMoi-tenSanPham">Bộ sưu tập Thu Đông</div>
+				<div class="BSTMoi-moTaSanPham">Hãy sắm cho các bạn thú cưng của mình một diện mạo mới nào!</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+			<div class="BSTMoi-sanPham">
+				<img class="BSTMoi-imgSanPham" alt="" src="/images/BSTMoi-imgSanPham-1.png">
+				<div class="BSTMoi-tenSanPham">Phụ kiện đồ chơi cho các Boss</div>
+				<div class="BSTMoi-moTaSanPham">Thiết kế đáng yêu, đa dạng mẫu mã, thân thiện với thú cưng!</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+		</div>
+		<div class="bestSelling">
+			<img class="bestSelling-img-1" alt="" src="/images/bestSelling-img-1.jpg">
+			<img class="bestSelling-img-2" alt="" src="/images/bestSelling-img-2.png">
+			<div class="bestSelling-tieuDe">TOP SẢN PHẨM BÁN CHẠY NHẤT 🔥</nav></div>
+			<div class="bestSelling-moTa"> Được thống kê theo ngày/tháng những bạn thú cưng, phụ kiện và đồ ăn chất lượng có lượt bán cao nhất</div>
+			<div class="bestSelling-xemThem">XEM THÊM</div>
+		</div>
+		<div class="service">
+			<div class="service-title">Dịch vụ</div>
+
+			<div class="service-item">
+				<span class="material-icons service-icon shipping-icon" style="font-size: 60px;">local_shipping</span> 
+				<div class="service-title-item">Giao hàng miễn phí</div>
+				<div class="service-description">Giao hàng nhanh trên toàn quốc hoàn toàn miễn phí</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+
+			<div class="service-item">
+				<span class="material-icons service-icon warranty-icon" style="font-size: 60px;">shield</span> 
+				<div class="service-title-item">Cam kết thuần chủng 100%</div>
+				<div class="service-description">Cam kết thú cưng thuần chủng không lai tạp</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+
+			<div class="service-item">
+				<span class="material-icons service-icon warranty-icon" style="font-size: 60px;">swap_horiz</span> 
+				<div class="service-title-item">Chế độ thu đổi 100%</div>
+				<div class="service-description">Thu đổi nhanh chóng, với chính sách lên đến 100%</div>
+				<div class="khamPhaNgay">Khám phá ngay &gt;</div>
+			</div>
+		</div>
+
+    	<div class="cuaHang">
+			<a href="/cuaHangHanDK">
+				<img class="cuaHang-img" alt="Cửa hàng ShopPNP" src="/images/cuaHang-img.jpg">
+			</a>
+			<div class="cuaHang-tieuDe">ShopPNP</div>
+			<div class="cuaHang-moTa">Thế giới thú cưng cùng không gian mua sắm tuyệt vời đang chờ bạn ghé thăm.</div>
+			<div class="cuaHang-datLichHen">Đặt lịch hẹn</div>   			
+    	</div>
+		<div class="coTheBanSeThich">
+			<div class="coTheBanSeThich-header">
+				<div class="coTheBanSeThich-tieuDe">Có thể bạn sẽ thích</div>
+				<div class="coTheBanSeThich-xemThem">Xem thêm &gt;</div>
+			</div>
+			<div class="coTheBanSeThich-content">
+				<button class="btn-prev" onclick="slideLeft()">&#8249;</button>
+				<div class="coTheBanSeThich-slider" id="slider">
+					<img class="coTheBanSeThich-item" src="/images/suggest1.png" alt="Ảnh 1">
+					<img class="coTheBanSeThich-item" src="/images/suggest2.jpg" alt="Ảnh 2">
+					<img class="coTheBanSeThich-item" src="/images/suggest3.jpg" alt="Ảnh 3">
+					<img class="coTheBanSeThich-item" src="/images/suggest4.jpeg" alt="Ảnh 4">
+					<img class="coTheBanSeThich-item" src="/images/suggest5.jpg" alt="Ảnh 5">
+					<img class="coTheBanSeThich-item" src="/images/suggest6.jpg" alt="Ảnh 6">
+					<img class="coTheBanSeThich-item" src="/images/suggest7.jpg" alt="Ảnh 7">
+					<img class="coTheBanSeThich-item" src="/images/suggest8.jpg" alt="Ảnh 8">
+					<img class="coTheBanSeThich-item" src="/images/suggest9.jpg" alt="Ảnh 9">
+					<img class="coTheBanSeThich-item" src="/images/suggest10.jpg" alt="Ảnh 10">
+					<img class="coTheBanSeThich-item" src="/images/suggest11.jpg" alt="Ảnh 11">
+					<img class="coTheBanSeThich-item" src="/images/suggest12.png" alt="Ảnh 12">
+					<img class="coTheBanSeThich-item" src="/images/suggest13.jpg" alt="Ảnh 13">
+					<img class="coTheBanSeThich-item" src="/images/suggest14.jpg" alt="Ảnh 14">
+					<img class="coTheBanSeThich-item" src="/images/suggest15.jpg" alt="Ảnh 15">
+					<img class="coTheBanSeThich-item" src="/images/suggest16.jpg" alt="Ảnh 16">
+					<img class="coTheBanSeThich-item" src="/images/suggest17.jpg" alt="Ảnh 17">
+					<img class="coTheBanSeThich-item" src="/images/suggest18.jpg" alt="Ảnh 18">
+				</div>
+				<button class="btn-next" onclick="slideRight()">&#8250;</button>
+			</div>
+			<script src="/js/suggest.js"></script>
+		</div>
+		<div class="nhanTuVan">	
+			<div class="nhanTuVan-tieuDe">Nhận tư vấn từ ShopPNP</div>
+			<div class="nhanTuVan-moTa">Đăng ký ngay bên dưới để nhận được sự hỗ trợ từ chúng tôi.</div>
+			<span class="material-icons nhanTuVan-icon" style="font-size: 60px;">group</span> <!-- Trợ giúp -->
+			<div class="nhanTuVan-hoVaTen">
+				<label for="hoVaTen"></label>
+				<input type="text" id="hoVaTen" placeholder="Họ và tên" />
+			</div>
+			<div class="nhanTuVan-sdt">
+				<label for="sdt"></label>
+				<input type="text" id="sdt" placeholder="Số điện thoại" />
+			</div>
+			<div class="nhanTuVan-tinhThanh">
+				<label for="tinhThanh"></label>
+				<select id="tinhThanh">
+					<option value="" disabled selected>Chọn tỉnh thành</option>
+				</select>
+			</div>
+			<script src="~/js/tinhThanh.js"></script>
+		<button class="nhanTuVan-submit">Nhận tư vấn</button>
+		<script src="/js/nhanTuVan.js"></script>
+		</div>
+  	</div>
+</body>
+</html>
