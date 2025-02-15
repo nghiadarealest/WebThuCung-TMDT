@@ -1,49 +1,423 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebThuCung</title>
+    <title>@ViewData["Title"] - HanDK</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebThuCung.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebThuCung</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - WebThuCung - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <link rel="stylesheet" href="~/_123.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Thêm liên kết tới Font Awesome CDN -->
+	<link rel="icon" type="image/png" href="~/images/HanDK-removebg.png" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,200;0,300;0,400;1,300&display=swap" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/js/loginPup.js"></script>
+    <script src="~/js/audioPlayer.js"></script>
+	<script src="~/js//user-dropdown.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <header>
+  		<div class="header">
+			<partial name="_LoginPopup" />
+			<div class="header-child">
+				<!-- Các icon bên trái -->
+				<div class="left-icons">
+					<span class="material-icons search-location-icon">location_on</span> <!-- Tìm kiếm vị trí -->
+					<span class="material-icons icon-facebook-color">facebook</span> <!-- Facebook -->
+					<span class="material-icons phone-volume-icon">phone</span> <!-- Điện thoại -->
+					<div class="div">0918979236</div> <!-- Số điện thoại -->
+				</div>
+
+				<!-- Logo thương hiệu -->
+				<img class="handk-icon" alt="HanDK" src="/images/LogoShop.png" onclick="window.location='@Url.Action("Index", "Home")';" style="cursor: pointer;">
+
+				<!-- Các icon bên phải -->
+				<div class="right-icons">
+					<a href="/home/cart" class="material-icons shopping-cart-icon" style="text-decoration: none;">shopping_cart</a> <!-- Giỏ hàng -->
+					<div style="display: flex; align-items: center">
+						<span class="material-icons user-icon" id="user-icon">person</span> <!-- Biểu tượng mặc định là person -->
+						<div class="dropdownn" id="user-dropdown" style="display: none;">
+							<button class="dropdownn-toggle" id="dropdown-btn" aria-expanded="false" 
+							style="background-color: transparent;border: none;">
+								<p style=" margin: 0" class="username"></p> <!-- Hiển thị tên người dùng -->
+							</button>
+							<div class="dropdownn-menu" aria-labelledby="dropdown-btn">
+								<a class="dropdownn-item" href="/home/UserInfo">Thông tin cá nhân</a>
+								<a class="dropdownn-item" href="/home/transactionhistory">Lịch sử mua hàng</a>
+								<a class="dropdownn-item" href="/home/yeuThich">Yêu thích</a> <!-- Đăng xuất -->
+								<a class="dropdownn-item" href="/home" onclick="logout()">Đăng xuất</a> <!-- Đăng xuất -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<nav>
+				<div class="wrapper">
+					<ul class="nav-links">
+						<li><a href="@Url.Action("Index", "Home")">Trang chủ</a></li>
+						<li>
+    						<a href="javascript:void(0);">Danh mục <span class="arrowHover">&#8593;</span></a>
+							<ul class="dropdown">
+								<li>
+									<a href="/category/nhanCauHon" onclick="handleClick(event)">Chó 🐶</a>
+									<ul class="dropdown1">
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Giống loài</a>
+											<ul class="type">
+												<li><a href="#">Chó Poodle</a></li>
+												<li><a href="#">Chó Phốc Sóc</a></li>
+												<li><a href="#">Chó Bully</a></li>
+												<li><a href="#">Chó Ngao</a></li>
+												<li><a href="#">Chó Shiba</a></li>
+												<li><a href="#">Chó Alaskan</a></li>
+												<li><a href="#">Chó Beagle </a></li>
+												<li><a href="#">Chó Husky</a></li>
+											</ul>
+											</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;"> </a>
+											<ul class="type">
+												<li><a href="#">Chó Chihuahua</a></li>
+												<li><a href="#">Chó Pug</a></li>
+												<li><a href="#">Chó Samoyed</a></li>
+												<li><a href="#">Chó Maltese</a></li>
+												<li><a href="#">Chó Đốm</a></li>
+												
+											</ul>
+											</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Bộ sưu tập</a>
+											<ul class="type">
+												<li><a href="#">Thức Ăn</a></li>
+												<li><a href="#">Phụ Kiện Đồ Chơi</a></li>
+												<li><a href="#">Quần Áo</a></li>
+											</ul>
+										</li>
+										<img class="header-drop" alt="" src="images\danhMuc1.jpg">								
+									</ul>
+								</li>
+								<li>
+									<a href="/category/nhanCuoi" onclick="handleClick(event)">Mèo 🐈</a>
+									<ul class="dropdown1">
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Giống loài</i></a>
+											<ul class="type">
+												<li><a href="#">Mèo Anh lông ngắn</a></li>
+												<li><a href="#">Mèo Anh lông dài</a></li>
+												<li><a href="#">Mèo Ba Tư</a></li>
+												<li><a href="#">Mèo tai cụp Scotland</a></li>
+												<li><a href="#">Mèo Moggie</a></li>
+												<li><a href="#">Mèo Xiêm</a></li>
+												<li><a href="#">Mèo Ragdoll</a></li>
+											</ul>
+											</li>
+										<li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;"></a>
+											<ul class="type">
+												<li><a href="#">Mèo Munchkin</a></li>
+												<li><a href="#">Mèo Tam Thể</a></li>
+												<li><a href="#">Mèo Mướp</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Bộ sưu tập</a>
+											<ul class="type">
+												<li><a href="#">Thức Ăn</a></li>
+												<li><a href="#">Phụ Kiện Đồ Chơi</a></li>
+												<li><a href="#">Quần Áo</a></li>
+											</ul>
+										</li>
+										<img class="header-drop" alt="" src="/images/danhMuc2.jpg">									
+									</ul>
+									</li>
+								@* <li>
+									<a href="/category/trangSuc" onclick="handleClick(event)">Trang sức</a>
+									<ul class="dropdown1">
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Loại trang sức</i></a>
+											<ul class="type">
+												<li><a href="#">Nhẫn kim cương</a></li>
+												<li><a href="#">Nhẫn thời trang</a></li>
+												<li><a href="#">Nhẫn nam</a></li>
+												<li><a href="#">Bông tai</a></li>
+												<li><a href="#">Dây chuyền</a></li>
+												<li><a href="#">Vòng tay</a></li>
+												<li><a href="#">Vàng thần tài</a></li>
+											</ul>
+											</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Chất liệu</a>
+											<ul class="type">
+												<li><a href="#">Vàng 14K</a></li>
+												<li><a href="#">Vàng 18K</a></li>
+												<li><a href="#">Bạch kim</a></li>
+											</ul>
+											</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Bộ sưu tập</a>
+											<ul class="type">
+												<li><a href="#">The Hearts</a></li>
+												<li><a href="#">Brilliant Layering</a></li>
+											</ul>
+										</li>
+										<img class="header-drop" alt="" src="/images/danhMuc3.png">								
+									</ul>
+									</li>
+								<li>
+									<a href="/category/kimCuong" onclick="handleClick(event)">Kim cương</a>
+									<ul class="dropdown1">
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Giá tiền</i></a>
+											<ul class="type">
+												<li><a href="#">Dưới 30 triệu</a></li>
+												<li><a href="#">Từ 30 triệu đến 100 triệu</a></li>
+												<li><a href="#">Từ 100 triệu đến 200 triệu</a></li>
+												<li><a href="#">Từ 200 triệu đến 1 tỷ</a></li>
+											</ul>
+											</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Dáng</a>
+											<ul class="type">
+												<li><a href="#">Round</a></li>
+												<li><a href="#">Princess</a></li>
+												<li><a href="#">Oval</a></li>
+												<li><a href="#">Pear</a></li>
+												<li><a href="#">Emerald</a></li>
+												<li><a href="#">Heart</a></li>
+												<li><a href="#">Radiant</a></li>
+												<li><a href="#">Marquise</a></li>
+											</ul>
+											</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Bảng giá kim cương GIA</a>
+											<ul class="type">
+												<li><a href="#">Giá kim cương 3 ly 6</a></li>
+												<li><a href="#">Giá kim cương 4 ly 5</a></li>
+												<li><a href="#">Giá kim cương 5 ly</a></li>
+												<li><a href="#">Giá kim cương 5 ly 4</a></li>
+											</ul>
+										</li>
+										<img class="header-drop" alt="" src="/images/danhMuc4.png">							
+									</ul>
+									</li>
+								<li>
+									<a href="/category/mens" onclick="handleClick(event)">Men's</a>
+									<ul class="dropdown1">
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Kiểu dáng</a>
+											<ul class="type">
+												<li><a href="#">Phong thuỷ</a></li>
+												<li><a href="#">Signet</a></li>
+												<li><a href="#">Fancy</a></li>
+												<li><a href="#">Eternity</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#" style="text-decoration: none; color: inherit; cursor: default; font-weight: lighter;">Bộ sưu tập</a>
+											<ul class="type">
+												<li><a href="#">True North</a></li>
+											</ul>
+										</li>
+										<img class="header-drop" alt="" src="/images/danhMuc5.png">								
+									</ul>
+								</li> *@
+							</ul>
+							</li>
+						<li>
+							<a href="javascript:void(0);">Thông tin <span class="arrowHover">&#8593;</span></a>
+							<ul class="dropdown">
+								<li><a href="/thongTin/huongDanDoSize">Kiểm tra sức khỏe</a></li>
+								<li><a href="/thongTin/chinhSachThanhToan">Thanh toán</a></li>
+								<li><a href="/thongTin/chinhSachBaoMatThongTin">Bảo mật thông tin</a></li>
+							</ul>
+							</li>
+						<li><a href="/khuyenMai" style="color: red; text-decoration: none;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='red'">Khuyến mãi</a></li>
+						<li><a href="/cauChuyenHanDK">HanDK</a></li>
+					</ul>
+					<div class="search-group">
+							<input type="text" class="search-input" placeholder="Tìm kiếm...">
+							<span class="material-icons search-icon">search</span>
+						</div>	
+				</div>
+			</nav>
+
+			@* <div class="music-player">
+                <div class="toggle-player-btn"> *@
+        <i id="toggle-icon" class="fas fa-chevron-up"></i>
+    </div>
+
+    @* <div class="song-bar">
+        <div class="song-infos">
+            
+            <div class="song-description">
+                <p class="titleAudio" id="song-title"> </p>
+            </div>
+        </div>
+    </div> *@
+    <div class="progress-controller">
+        <div class="control-buttons">
+            <i class="fas fa-random" id="shuffle-btn"></i>
+            <i class="fas fa-step-backward" id="prev-btn"></i>
+            <i class="play-pause fas fa-play" id="play-pause-btn"></i>
+            <i class="fas fa-step-forward" id="next-btn"></i>
+            <i class="fas fa-undo-alt" id="repeat-btn"></i>
+        </div>
+        <img class="handk-icon1" alt="HanDK" src="/images/HanDK-removebg.png" onclick="window.location='@Url.Action("Index", "Home")';" style="cursor: pointer;">
+        <div class="progress-container">
+    <span id="current-time">0:00</span>
+    <div class="progress-bar">
+        <input type="range" id="progress-bar" value="0" step="1" />
+    </div>
+    <span id="duration">0:00</span>
+</div>
+
+    </div>
+    <div class="other-features">
+        <!-- Nút để hiển thị danh sách bài hát -->
+<!-- Biểu tượng để hiển thị danh sách bài hát -->
+    <div id="show-song-list-btn" class="icon-btn">
+        <i class="fas fa-list-ul"></i> 
+    </div>
+
+<!-- Container chứa danh sách bài hát -->
+<div id="song-list-container" style="display: none;">
+    <ul id="song-list"></ul>
+</div>
+        <div class="volume-bar">
+    <i class="fas fa-volume-down" id="volume-icon"></i>
+    <div class="progress-bar">
+        <input type="range" id="volume-control" value="100" min="0" max="100" step="1" />
+    </div>
+</div>
+
+
+    </div>
+
+    <!-- Audio element to play music -->
+    <audio id="audio-player" preload="auto">
+    </audio>
+</div>
+</div>
+	</header>
+
+    
+        <main class="container">
+            @RenderBody()
+        </main>
+
+
+    <footer>
+        <div class="footer">
+			<img class="handk-footer-icon" alt="" src="/images/LogoShop.png">
+			<div class="tieu-de">
+				<div class="tieude1">
+					<h1>SẢN PHẨM</h1>
+					<a href="/category/nhanCuoi" class="foot">Chó </a>
+					<a href="/category/nhanCauHon" class="foot">Mèo</a>
+					<a href="/category/trangSuc" class="foot"></a>
+					<a href="/category/kimCuong" class="foot"></a>
+					<a href="/category/mens" class="foot"></a>
+				</div>
+
+				<div class="tieude2">
+					<h1>LIÊN HỆ</h1>
+					<div class="text-foot">GỌI MUA HÀNG</div>
+					<div class="foot">0976534850</div>
+					<div class="foot">0976534850</div>
+					<div class="foot">0976534850</div>
+					<div class="text-foot">GÓP Ý KHIẾU NẠI</div>
+					<div class="foot">0976534850</div>
+					<div class="foot">Mail</div>
+					
+				</div>
+				<div class="tieude3">
+					<h1>THÔNG TIN HỖ TRỢ</h1>
+					<a href="/thongTin/chinhSachThuHoiVaDoiTra" class="foot">Kiểm tra sức khỏe</a>
+					<a href="/thongTin/chinhSachThanhToan" class="foot">Thanh toán</a>
+					<a href="/thongTin/chinhSachBaoMatThongTin" class="foot">Bảo mật thông tin</a>
+					<a href="/thongTin/huongDanDoSize" class="foot"></a>
+					<a href="/thongTin/giaVang" class="foot"></a>
+				</div>
+
+				<div class="tieude4">
+					<h1>VỀ CHÚNG TÔI</h1>
+					<a href="/cauChuyenHanDK" class="foot">Câu chuyện ShopPNP</a>
+					<a href="/cuaHangHanDK" class="foot">Cửa hàng PNP</a>
+				</div>
+			</div>	
+    	</div>
+    </footer>
+    
     @await RenderSectionAsync("Scripts", required: false)
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="~/admin/js/snow.js"></script>
+
+	<script>
+		const username = document.querySelector('.username');
+		username.innerHTML  += localStorage.getItem('username').toString();
+	</script>
+
+    <script>
+        @* jQuery(function() {
+            jQuery("body").snow({
+            intensity: 2,           // Number of snowflakes
+            sizeRange: [8, 16],      // Snowflake size range (min and max size in pixels)
+            opacityRange: [0.4, 0.6],  // Snowflake opacity range
+            driftRange: [10, 12],    // Horizontal drift (sideways movement range)
+            speedRange: [55, 80]    // Falling speed range in pixels per second
+            });
+        }); *@
+
+		function handleClick(event) {
+			let text = event.target.textContent;
+			text = text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+			text = text.replace(/\s+/g, "");
+			switch (text.toLowerCase())
+            {
+                case "nhancauhon":
+					localStorage.setItem('categoryId', 1); 
+                    break;
+                case "nhancuoi":
+					localStorage.setItem('categoryId', 2); 
+                    break;
+                case "trangsuc":
+					localStorage.setItem('categoryId', 3); 
+                    break;
+                case "kimcuong":
+					localStorage.setItem('categoryId', 4); 
+                    break;
+                case "men's":
+					localStorage.setItem('categoryId', 5); 
+                    break;
+                default:
+					localStorage.setItem('categoryId', 1); 
+
+            }
+		}
+    </script>
+
+
+
+
+
+	<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="Chăm sóc khách hàng ShopPNP"
+  agent-id="0b1a7fb6-fd81-4c01-b536-8083972bfa60"
+  language-code="vi"
+></df-messenger>
 </body>
 </html>
