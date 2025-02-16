@@ -1,0 +1,745 @@
+/* Tổng quan header */
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Cố định phần header */
+  top: 0; /* Đặt header ở trên cùng */
+  left: 0;
+  right: 0;
+  height: 120px;
+  z-index: 1000; /* Đảm bảo header sẽ luôn nổi trên các phần tử khác */
+}
+
+/* Phần đầu tiên của header */
+/* Bố cục tổng thể của header-child */
+.header-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Đảm bảo các phần tử được phân bố đều */
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  height: 50px;
+  margin-left: 240px;
+  margin-right: 240px;
+}
+
+/* Chứa các icon bên trái (bao gồm cả số điện thoại) */
+.header-child .left-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* Khoảng cách giữa các icon */
+}
+
+.material-icons {
+  cursor: pointer;  /* Thêm hiệu ứng bàn tay khi hover */
+  transition: transform 0.3s ease;  /* Thêm hiệu ứng khi hover */
+}
+
+.search-location-icon:hover, 
+.icon-facebook-color:hover,
+.phone-volume-icon:hover,
+.shopping-cart-icon:hover,
+.user-icon:hover {
+  transform: scale(1.2); /* Phóng to icon khi hover */
+}
+
+/* Đặc biệt tùy chỉnh màu sắc cho từng icon */
+.search-location-icon,
+.icon-facebook-color,
+.phone-volume-icon,
+.shopping-cart-icon,
+.user-icon {
+  color: #007bff;  /* Màu xanh cho icon tìm kiếm vị trí */
+}
+.search-icon{
+  color: #adadad;
+}
+/* Phần logo hoặc thương hiệu (handk-icon) */
+.handk-icon {
+  width: 80px !important;
+  height: 60px !important;
+  margin-left: 282.5px;
+  margin-right: auto; /* Để căn giữa */
+}
+.handk-icon1 {
+  display: flex;
+  margin-left: 140px;
+  width: 60px;
+  height: 45px;
+  margin-right: 150px; /* Để căn giữa */
+}
+/* Chứa các icon phía bên phải (shopping cart và user) */
+.header-child .right-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px; /* Khoảng cách giữa các icon */
+}
+
+/* Các icon trong phần đầu header */
+.header-child img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Phần thông tin số điện thoại */
+.header-child .div {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: space-between; /* Giữ các phần tử cách đều nhau theo chiều ngang */
+  height: 75px;
+  padding-top: 7.5px;
+  margin-left: 230px;
+  margin-right: 240px;
+  justify-content: center; /* Giữ các phần tử cân đối theo chiều ngang */
+
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-top: -1.5px;
+  gap: 30px;
+  padding: 10px;
+}
+
+.nav-links li {
+  position: relative; /* Cần để định vị dropdown */
+  margin-right: 7.5px;
+  align-items: center; /* Canh giữa chữ trong mục */
+
+}
+
+.nav-links li a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+
+.dropdown {
+  visibility: hidden; /* Ẩn mặc định */
+  opacity: 0; /* Làm trong suốt */
+  position: fixed; /* Căn chỉnh với toàn bộ màn hình */
+  top: 0; /* Đặt ở phía trên cùng của màn hình */
+  left: 0; /* Đặt ở phía bên trái của màn hình */
+  width: 100%;
+  background-color: #f8f9fa; /* Màu nền trắng cho dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho dropdown */
+  padding: 10px 0 10px 260px; /* Đệm bên trái cho chữ cách 260px */
+  list-style: none; /* Bỏ đi dấu chấm trong danh sách */
+  z-index: 1000; /* Đảm bảo dropdown nằm trên các phần tử khác */
+  display: flex; /* Các mục trong dropdown sẽ được xếp theo hàng ngang */
+  gap: 10px; /* Khoảng cách giữa các mục */
+  transition: visibility 0.3s, opacity 0.3s;
+  margin-top: 120px;
+  height: 60px;
+   /* Tạo hiệu ứng mượt mà khi hiển thị/ẩn */
+}
+
+/* Các liên kết trong dropdown (chữ trong các mục) */
+.dropdown li a {
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: 500; /* Độ đậm của chữ */
+  color: #333; /* Màu chữ */
+  padding-right: 15px;
+  justify-content: space-between; /* Giữ các phần tử cân đối theo chiều ngang */
+  text-decoration: none; /* Bỏ đi gạch chân */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng hover */
+.dropdown li a:hover {
+  background-color: #f8f9fa;
+  color: #fc77f1;
+}
+.arrowHover {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Hiệu ứng quay mượt mà */
+}
+/* Quay mũi tên thành trỏ xuống khi hover */
+li:hover .arrowHover {
+  transform: rotate(180deg); /* Quay mũi tên 180 độ để nó thành mũi tên trỏ xuống */
+}
+/* Hiển thị dropdown khi hover vào mục cha */
+.nav-links li:hover > .dropdown {
+  visibility: visible; /* Hiển thị dropdown */
+  opacity: 1; /* Làm rõ dropdown */
+}
+
+.nav-links li:hover > a {
+  color: #fc77f1; /* Màu chữ tùy chỉnh khi hover */
+  text-decoration: underline; /* Thêm gạch chân (tuỳ chọn) */
+}
+
+
+.dropdown1 {
+  visibility: hidden; /* Ẩn mặc định */
+  opacity: 0; /* Làm trong suốt */
+  position: fixed; /* Căn chỉnh với toàn bộ màn hình */
+  top: 0; /* Đặt ở phía trên cùng của màn hình */
+  left: 0; /* Đặt ở phía bên trái của màn hình */
+  width: 100%;
+  background-color: #f8f9fa; /* Màu nền trắng cho dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho dropdown */
+  padding: 10px 0; /* Đệm cho dropdown */
+  list-style: none; /* Bỏ đi dấu chấm trong danh sách */
+  z-index: 1000; /* Đảm bảo dropdown nằm trên các phần tử khác */
+  display: flex; /* Các mục trong dropdown sẽ được xếp theo hàng ngang */
+  gap: 20px; /* Khoảng cách giữa các mục là 65px */
+  transition: visibility 0.3s, opacity 0.3s;
+  margin-top: 170px;
+  height: 340px;
+  padding: 10px 0 10px 260px;
+   /* Tạo hiệu ứng mượt mà khi hiển thị/ẩn */
+}
+
+
+
+
+/* Các liên kết trong dropdown (chữ trong các mục) */
+.dropdown1 li a {
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: 500; /* Độ đậm của chữ */
+  color: #333; /* Màu chữ */
+  padding-right: 15px;
+  justify-content: space-between; /* Giữ các phần tử cân đối theo chiều ngang */
+  text-decoration: none; /* Bỏ đi gạch chân */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng khi hover */
+}
+
+/* Hiệu ứng hover */
+.dropdown1 li a:hover {
+  background-color: #f8f9fa;
+  color: #fc77f1;
+}
+
+/* Hiển thị dropdown khi hover vào mục cha */
+.dropdown li:hover > .dropdown1 {
+  visibility: visible; /* Hiển thị dropdown */
+  opacity: 1; /* Làm rõ dropdown */
+}
+/* Phần tìm kiếm */
+.search-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: -40px;
+  position: relative; /* Để xử lý vị trí của icon và hiệu ứng */
+}
+
+.type {
+  margin-top: 20px;
+  list-style-type: none; /* Loại bỏ dấu chấm đầu dòng */
+  padding: 0; /* Loại bỏ khoảng cách mặc định */
+}
+
+.type li {
+  margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+
+.type li a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: #333; /* Màu chữ */
+  font-size: 16px; /* Kích thước chữ */
+  font-weight: 600; /* Độ đậm của chữ */
+}
+
+.type li a:hover {
+  color: #007bff; /* Màu chữ khi hover */
+}
+
+.header-drop{
+  width: flex; /* Kích thước logo */
+  height: 200px;
+  position: absolute; /* Đảm bảo hình ảnh được định vị chính xác */
+  right: 260px;   
+
+}
+
+/* Biểu tượng tìm kiếm */
+.search-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute; /* Đặt icon theo vị trí tuyệt đối */
+  right: 10px; /* Căn lề phải của icon */
+  top: 17.5px; /* Đưa icon vào giữa theo chiều dọc */
+  transform: translateY(-50%); /* Đảm bảo icon được căn giữa */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Cải tiến placeholder cho input tìm kiếm */
+.search-input::placeholder {
+  font-style: italic; /* In nghiêng chữ placeholder */
+  color: #888; /* Màu chữ placeholder nhạt hơn */
+}
+
+/* Thiết lập kiểu cho input tìm kiếm */
+.search-input {
+  flex-grow: 1; /* Ô nhập chiếm toàn bộ không gian còn lại */
+  background-color: #ddd; /* Màu nền của ô nhập */
+  border: 1px solid #ddd; /* Viền mặc định */
+  color: #000; /* Màu chữ đen */
+  font-size: 14px;
+  padding: 7.5px;
+  font-weight: lighter;
+  padding-left: 15px; /* Tăng khoảng cách từ rìa trái */
+  padding-right: 40px; /* Chừa khoảng trống đủ rộng cho biểu tượng */
+  border-radius: 20px; /* Góc bo tròn */
+  outline: none; /* Loại bỏ viền khi click vào ô nhập */
+  font-style: normal; /* Định dạng văn bản thông thường */
+  transition: all 0.3s ease; /* Thêm hiệu ứng cho tất cả các thay đổi trong 0.3s */
+}
+
+/* Khi input tìm kiếm được focus (nhấp vào) */
+.search-input:focus {
+  border: 1px solid #000; /* Đổi màu border thành đen khi focus */
+  padding-left: 13px; /* Điều chỉnh lại padding nếu cần */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Thêm hiệu ứng bóng khi focus */
+  transform: scale(1.05); /* Tăng nhẹ kích thước của trường nhập liệu */
+}
+
+/* Khi input được focus, thêm hiệu ứng cho icon */
+.search-input:focus + .search-icon {
+  transform: translateY(-50%) scale(1.2); /* Phóng to nhẹ icon */
+}
+
+
+.music-player {
+  border-radius: 30px 30px 0 0;
+  --primary-color: white;
+  --secondary-color: white;
+  --padding: 1em;
+  background: radial-gradient(circle, rgba(170, 120, 120, 0.7), rgba(120, 120, 120, 0.2));
+
+  font-size: 14px;
+  background-color: #787878;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* 0: không dịch chuyển theo chiều ngang, -5px: dịch chuyển 5px lên trên, 10px: độ mờ, rgba(0, 0, 0, 0.3): màu đen với độ trong suốt */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Sử dụng fixed để giữ player ở footer */
+  bottom: 0; /* Đặt nó ở dưới cùng của cửa sổ */
+  left: 0;
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  padding: 5px;
+  color: var(--primary-color);
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.music-player.closed {
+  transform: translateY(100%);
+}
+
+.toggle-player-btn {
+  position: absolute;
+  top: -30px;
+  left: 5%;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3); /* 0: không dịch chuyển theo chiều ngang, -5px: dịch chuyển 5px lên trên, 10px: độ mờ, rgba(0, 0, 0, 0.3): màu đen với độ trong suốt */
+  transform: translateX(-50%);
+  background: #555;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+/* Cấu hình thanh chạy bài hát và thanh âm lượng */
+input[type="range"] {
+    -webkit-appearance: none; /* Xóa kiểu mặc định của trình duyệt */
+    width: 100%; /* Đảm bảo thanh chiếm toàn bộ chiều ngang */
+    height: 5px; /* Độ cao của thanh */
+    background: black; /* Màu của thanh chạy */
+    outline: none; /* Xóa viền */
+    border-radius: 5px; /* Làm bo góc thanh */
+}
+
+/* Đầu trượt (thumb) của thanh */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Xóa kiểu mặc định của trình duyệt */
+    width: 7.5px; /* Chiều rộng đầu trượt */
+    height: 15px; /* Chiều cao đầu trượt */
+    background: rgb(255, 255, 255); /* Màu của đầu trượt */
+    border-radius: 50%; /* Làm tròn đầu trượt */
+    cursor: pointer; /* Thay đổi con trỏ khi di chuột qua */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+i{
+    color: var(--secondary-color);
+}
+
+.song-bar {
+    position: absolute;
+    left: var(--padding);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: auto;
+}
+
+.song-infos {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.song-description p {
+    margin: 0.2em;
+}
+.titleAudio,
+.artist {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.titleAudio:hover,
+.artist:hover {
+  color: #000;
+  transition: color 0.3s; /* Thêm hiệu ứng chuyển màu */
+
+}
+.artist{
+    color: var(--secondary-color);
+}
+
+.progress-controller{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-color);
+}
+.control-buttons{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin-left: 387.5px;
+}
+
+.fa-pause:before {
+  padding-right: 2.75px;
+  padding-left: 2.75px;
+  content: "\f04c";
+}
+.play-pause{
+    display: inline-block;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+}
+.play-pause:hover{
+    transition: background-color 0.3s, color 0.3s; /* Thêm hiệu ứng chuyển màu */
+    color: white;
+    background-color: black;
+}
+.progress-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.progress-bar{
+    height: 5px;
+    border-radius: 10px;
+    width: 30%;
+    background-color: #ccc4;
+}
+.progress{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+}
+.progress-bar:hover .progress{
+    background-color: var(--green-color);
+}
+.progress-bar:hover .progress::after{
+    content: "";
+    position: absolute;
+    --size: 1em;
+    width: var(--size);
+    height: var(--size);
+    right: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translate(50%, calc(2px - 50%));
+}
+#song-list-container {
+  position: fixed;
+  right: -17.5px;
+  bottom: 75px;
+  background: radial-gradient(circle, rgba(170, 120, 120, 0.7), rgba(120, 120, 120, 0.2));
+
+  background-color: #787878;
+  padding: 20px;
+  border-radius: 30px 0 0 30px;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);  /* 0: không dịch chuyển theo chiều ngang, -5px: dịch chuyển 5px lên trên, 10px: độ mờ, rgba(0, 0, 0, 0.3): màu đen với độ trong suốt */
+  display: none; /* Ban đầu ẩn */
+  max-height: 300px;
+  overflow-y: auto;
+  width: 300px;
+  transition: all 0.3s ease-in-out; /* Animation hiển thị */
+  overflow-y: auto; /* Cho phép cuộn khi danh sách dài */
+  opacity: 0; /* Bắt đầu từ trạng thái trong suốt */
+  transform: translateX(100%); /* Trượt xuống */
+
+  z-index: 1000; /* Đảm bảo danh sách bài hát nằm trên các phần tử khác */
+
+}
+#song-list-container.show {
+  display: block; /* Hiển thị khi thêm class "show" */
+  opacity: 1; /* Hiện danh sách */
+  transform: translateX(0); /* Đưa về vị trí ban đầu */
+}
+.fa-random:hover, .fa-step-backward:hover,
+.fa-step-forward:hover, .fa-undo-alt:hover,
+.fa-list-ul:hover, .fa-volume-down:hover {
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s; /* Thêm hiệu ứng chuyển màu */
+
+}
+#song-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#song-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#song-list li:hover {
+  border-radius: 8px;
+  color: #000;
+  background: radial-gradient(circle, rgba(170, 120, 120, 0.7), rgba(120, 120, 120, 0.2));
+
+  background-color: #b7b7b7;
+}
+
+.other-features{
+    position: absolute;
+    right: var(--padding);
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.volume-bar{
+    display: flex;
+    align-items: center;
+    gap: .7em;
+}
+.volume-bar .progress-bar{
+    width: 6em;
+}
+.volume-bar .progress-bar:hover .progress::after{
+    --size: .8em;
+}
+input[type="range"] {
+    width: 100%;
+}
+/* Tổng thể footer */
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row; /* Đặt các tiêu đề nằm ngang */
+  justify-content: space-between; /* Tạo khoảng cách đều giữa các tiêu đề */
+  align-items: flex-start; /* Căn các tiêu đề lên trên cùng */
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding và border không làm tăng chiều rộng */
+  justify-content: flex-start; /* Đặt các phần tử từ trái sang phải */
+  background-color: #f5f5f5; /* Màu nền của footer */
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng phía trên footer */
+}
+.active {
+  color: rgb(0, 0, 0); /* Màu sắc khi nút được bật */
+}
+
+.inactive {
+  color: white; /* Màu sắc khi nút tắt */
+}
+
+/* Logo HanDK */
+.handk-footer-icon {
+  border-radius: 30px;
+  width: 240px; /* Kích thước logo */
+  height: 180px;
+  margin-left: 240px;
+  margin-right: 75px;
+}
+
+/* Phần chứa các tiêu đề và nội dung con */
+.tieu-de {
+  display: flex;
+  flex-direction: row; /* Các tiêu đề nằm ngang */
+  gap: 75px; /* Khoảng cách giữa các cột */
+}
+
+/* Cột tiêu đề */
+.tieude1, .tieude2, .tieude3, .tieude4 {
+  display: flex;
+  flex-direction: column; /* Nội dung trong cột dọc */
+}
+
+/* Tiêu đề chính (SẢN PHẨM, LIÊN HỆ, v.v.) */
+.tieude1 h1, 
+.tieude2 h1, 
+.tieude3 h1, 
+.tieude4 h1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và các nội dung con */
+}
+
+/* Nội dung con bên dưới tiêu đề */
+.foot {
+  text-decoration: none;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px; /* Khoảng cách giữa các mục con */
+  cursor: pointer;
+}
+
+.foot:hover {
+  color: #007bff; /* Đổi màu khi hover vào các nội dung con */
+}
+
+/* Text đặc biệt trong phần LIÊN HỆ */
+.text-foot {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #777;
+  margin-bottom: 15px; /* Tạo khoảng cách trước khi thêm nội dung con */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* CSS cho dropdown */
+.dropdownn {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownn-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none; /* Ẩn dropdown mặc định */
+  min-width: 160px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Đảm bảo dropdown hiện lên trên các phần tử khác */
+  border-radius: 8px;
+  transition: opacity 0.2s ease, visibility 0.2s ease; /* Thêm hiệu ứng chuyển tiếp */
+  opacity: 0; /* Bắt đầu với độ mờ */
+  visibility: hidden; /* Ẩn dropdown */
+}
+
+.dropdownn-item {
+  color: #333;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển tiếp cho màu nền */
+}
+
+.dropdownn-item:hover {
+  background-color: #f0f0f0; /* Hiệu ứng hover */
+}
+
+/* Hiển thị dropdown khi hover vào tên người dùng */
+.dropdownn:hover .dropdownn-menu {
+  display: block;
+  opacity: 1; /* Hiện dropdown */
+  visibility: visible; /* Hiện dropdown */
+}
+
+/* Đảm bảo rằng menu không bị che khuất */
+.dropdownn-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  z-index: 9999; /* Đảm bảo dropdown sẽ luôn hiển thị trên các phần tử khác */
+}
+
+/* Thêm hiệu ứng cho dropdown */
+.dropdownn:hover .dropdownn-menu {
+  animation: fadeIn 0.3s; /* Thêm hiệu ứng xuất hiện */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px); /* Đẩy lên một chút khi xuất hiện */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
