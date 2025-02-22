@@ -1,0 +1,661 @@
+  	
+    @{
+    ViewBag.Title = "Product Detail";
+}
+    <link rel="stylesheet"  href="/css/productDetail.css" />
+
+<div class="product-detail-wrapper">
+    
+</div>
+<div class="review-section">
+    <h2 class="review-title">Review từ khách hàng</h2>
+    
+    <div class="review-container">
+        <div class="write-review">
+    <textarea id="review-text" placeholder="Viết đánh giá của bạn..." rows="4"></textarea>
+    <div class="action-buttons">
+        <span class="material-icons upload-icon" id="upload-media">attach_file</span>
+        <span class="material-icons send-icon" id="submit-review">file_upload</span>
+    </div>
+    <input type="file" id="review-media" accept="image/*" multiple style="display: none;">
+    <div class="selected-media-preview" id="media-preview"></div>
+</div>
+
+
+        <div class="review-row">
+            <!-- Review Card 1 -->
+            <div class="review-card">
+                <div class="reviewer-info">
+                    <h3>Nguyễn Văn A</h3>
+                    <span class="review-date">20/11/2023</span>
+                </div>
+                <div class="review-media">
+                    <div class="image-slider">
+                        <img src="https://picsum.photos/300/200?random=1" alt="Review 1">
+                        <img src="https://picsum.photos/300/200?random=2" alt="Review 2">
+                        <img src="https://picsum.photos/300/200?random=3" alt="Review 3">
+                    </div>
+                </div>
+                <p class="review-content">Phụ kiện đồ chơi rất đẹp và chất lượng. Đóng gói cẩn thận, giao hàng nhanh. Sẽ ủng hộ shop dài dài!</p>
+            </div>
+
+            <!-- Review Card 2 -->
+            <div class="review-card">
+                <div class="reviewer-info">
+                    <h3>Trần Thị B</h3>
+                    <span class="review-date">19/11/2023</span>
+                </div>
+                <div class="review-media">
+                    <div class="image-slider">
+                        <img src="https://picsum.photos/300/200?random=4" alt="Review 1">
+                        <img src="https://picsum.photos/300/200?random=5" alt="Review 2">
+                    </div>
+                </div>
+                <p class="review-content">Các bạn thú cưng rất khỏe mạnh. Giao hàng cẩn thận, nhân viên tư vấn nhiệt tình.</p>
+            </div>
+
+            <!-- Review Card 3 -->
+            <div class="review-card">
+                <div class="reviewer-info">
+                    <h3>Lê Văn C</h3>
+                    <span class="review-date">18/11/2023</span>
+                </div>
+                <div class="review-media">
+                    <div class="image-slider">
+                        <img src="https://picsum.photos/300/200?random=6" alt="Review 1">
+                        <img src="https://picsum.photos/300/200?random=7" alt="Review 2">
+                        <img src="https://picsum.photos/300/200?random=8" alt="Review 3">
+                    </div>
+                </div>
+                <p class="review-content">Chất lượng quần áo thú cưng tuyệt vời, đúng như mô tả. Rất hài lòng!</p>
+            </div>
+
+            <!-- Review Card 4 -->
+            <div class="review-card">
+                <div class="reviewer-info">
+                    <h3>Phạm Thị D</h3>
+                    <span class="review-date">17/11/2023</span>
+                </div>
+                <div class="review-media">
+                    <div class="image-slider">
+                        <img src="https://picsum.photos/300/200?random=9" alt="Review 1">
+                        <img src="https://picsum.photos/300/200?random=10" alt="Review 2">
+                    </div>
+                </div>
+                <p class="review-content">Shop phục vụ rất tốt. Sẽ giới thiệu cho bạn bè!</p>
+            </div>
+        </div>
+    </div>
+
+<!-- Phần gradient mờ dần -->
+    <div class="feedback-fade"></div>
+    
+    <!-- Nút xem thêm -->
+    <button id="load-more" class="load-more-btn">Xem thêm review</button>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const reviewSection = document.querySelector('.review-section');
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    const gradientFade = document.querySelector('.feedback-fade');
+    
+    loadMoreBtn.addEventListener('click', function() {
+        // Kiểm tra xem đã hiển thị hết review chưa
+        if (reviewSection.style.maxHeight) {
+            // Nếu đã mở rộng, reset lại
+            reviewSection.style.maxHeight = '800px'; // Giá trị ban đầu
+            loadMoreBtn.style.display = 'block';
+            gradientFade.style.display = 'block';
+        } else {
+            // Nếu chưa mở rộng, hiển thị tất cả
+            reviewSection.style.maxHeight = 'none';
+            loadMoreBtn.style.display = 'none';
+            gradientFade.style.display = 'none';
+        }
+    });
+});
+    document.addEventListener('DOMContentLoaded', function() {
+    // Xử lý hiệu ứng hover ảnh
+    const imageSliders = document.querySelectorAll('.image-slider');
+    
+    imageSliders.forEach(slider => {
+        const images = slider.querySelectorAll('img');
+        let currentIndex = 0;
+        let interval;
+
+        slider.addEventListener('mouseenter', () => {
+            interval = setInterval(() => {
+                images[currentIndex].style.opacity = '0';
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.opacity = '1';
+            }, 1000);
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            clearInterval(interval);
+            images.forEach((img, index) => {
+                img.style.opacity = index === 0 ? '1' : '0';
+            });
+            currentIndex = 0;
+        });
+    });
+
+    // Xử lý nút xem thêm
+    const loadMoreBtn = document.getElementById('load-more');
+    const reviewContainer = document.querySelector('.review-container');
+    let currentPage = 1;
+    
+    // Fake data cho các review tiếp theo
+    const moreReviews = [
+        // Hàng thứ 2
+        [
+            {
+                name: "Hoàng Thị E",
+                date: "16/11/2023",
+                images: ["https://picsum.photos/300/200?random=11", "https://picsum.photos/300/200?random=12"],
+                content: "Phụ kiện và quần áo cho thú cưng rất phù hợp với giá tiền. Đóng gói cẩn thận!"
+            },
+            {
+                name: "Đỗ Văn F",
+                date: "15/11/2023",
+                images: ["https://picsum.photos/300/200?random=13", "https://picsum.photos/300/200?random=14", "https://picsum.photos/300/200?random=15"],
+                content: "Chất lượng tốt, đẹp hơn cả mong đợi. Sẽ ủng hộ shop lần sau!"
+            },
+            {
+                name: "Nguyễn Thị G",
+                date: "14/11/2023",
+                images: ["https://picsum.photos/300/200?random=16", "https://picsum.photos/300/200?random=17"],
+                content: "Thú cưng quấn chủ, khỏe mạnh."
+            },
+            {
+                name: "Trần Văn H",
+                date: "13/11/2023",
+                images: ["https://picsum.photos/300/200?random=18", "https://picsum.photos/300/200?random=19"],
+                content: "Shop tư vấn nhiệt tình, các bạn chó mèo cực xinh!"
+            }
+        ],
+        // Có thể thêm nhiều hàng nữa ở đây
+    ];
+
+    loadMoreBtn.addEventListener('click', () => {
+        if (currentPage <= moreReviews.length) {
+            const newRow = document.createElement('div');
+            newRow.className = 'review-row';
+            
+            moreReviews[currentPage - 1].forEach(review => {
+                const card = createReviewCard(review);
+                newRow.appendChild(card);
+            });
+
+            reviewContainer.appendChild(newRow);
+            currentPage++;
+
+            // Ẩn nút nếu không còn review
+            if (currentPage > moreReviews.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+
+            // Khởi tạo lại hiệu ứng hover cho các ảnh mới
+            initializeImageSliders(newRow);
+        }
+    });
+
+    function createReviewCard(review) {
+        const card = document.createElement('div');
+        card.className = 'review-card';
+        card.innerHTML = `
+            <div class="reviewer-info">
+                <h3>${review.name}</h3>
+                <span class="review-date">${review.date}</span>
+            </div>
+            <div class="review-media">
+                <div class="image-slider">
+                    ${review.images.map(img => `<img src="${img}" alt="Review">`).join('')}
+                </div>
+            </div>
+            <p class="review-content">${review.content}</p>
+        `;
+        return card;
+    }
+
+    function initializeImageSliders(container) {
+        const newSliders = container.querySelectorAll('.image-slider');
+        newSliders.forEach(slider => {
+            const images = slider.querySelectorAll('img');
+            let currentIndex = 0;
+            let interval;
+
+            slider.addEventListener('mouseenter', () => {
+                interval = setInterval(() => {
+                    images[currentIndex].style.opacity = '0';
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].style.opacity = '1';
+                }, 1000);
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                clearInterval(interval);
+                images.forEach((img, index) => {
+                    img.style.opacity = index === 0 ? '1' : '0';
+                });
+                currentIndex = 0;
+            });
+        });
+    }
+});
+</script>
+    <script>
+// Hiển thị ảnh được chọn
+document.getElementById('review-media').addEventListener('change', function (e) {
+    const previewContainer = document.getElementById('media-preview');
+    previewContainer.innerHTML = ''; // Xóa nội dung cũ
+
+    Array.from(e.target.files).forEach(file => {
+        if (file.type.startsWith('image')) {
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            img.alt = 'Ảnh được chọn';
+            previewContainer.appendChild(img);
+        }
+    });
+});
+
+// Kích hoạt chọn tệp khi nhấn vào nút upload
+document.getElementById('upload-media').addEventListener('click', function () {
+    document.getElementById('review-media').click();
+});
+
+// Xử lý đăng bài
+document.getElementById('submit-review').addEventListener('click', submitReview);
+document.getElementById('review-text').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        submitReview();
+    }
+});
+
+function submitReview() {
+    const reviewText = document.getElementById('review-text').value.trim();
+    const reviewMedia = document.getElementById('review-media').files;
+
+    if (!reviewText && reviewMedia.length === 0) {
+        alert("Vui lòng nhập nội dung hoặc đính kèm ít nhất một tệp!");
+        return;
+    }
+
+    // Xử lý đăng bài, bạn có thể thêm logic tại đây
+
+    // Xóa nội dung sau khi đăng
+    document.getElementById('review-text').value = '';
+    document.getElementById('review-media').value = '';
+    document.getElementById('media-preview').innerHTML = '';
+}
+
+    </script>
+<script>
+    let productId =  localStorage.getItem('productId'); 
+    let fakeProducts;
+
+    const addCart = async (productId) => {
+        let quantity = document.getElementById('quantity-input').value;
+        let userId = localStorage.getItem('id');
+        
+        let a =await fetch(`https://localhost:5003/api/cart`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                UserId: userId,
+                ProductId: productId,
+                Quantity: quantity
+            })
+        });
+
+        let res =await a.json();
+        if(res.status == 200) {
+            alert('Thêm vào giỏ hàng thành công');
+        } else {
+            alert('Thêm vào giỏ hàng thất bại');
+        }
+    }
+
+    const handleGoToViewCart = () => {
+        window.location.href = '/Home/cart';
+    }
+
+    const fetchProducts = async () => {
+        try {
+            // Gửi yêu cầu HTTP POST đến API login
+            const response = await fetch(`https://localhost:5003/api/products/byId?id=${productId}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            // Xử lý phản hồi từ API
+            if (response.ok) {
+                 let res = await response.json();
+                fakeProducts = res?.data;
+            } else {
+                console.log("Không tìm thấy sản phầm")
+            }
+        } catch (error) {
+            console.error('Lỗi khi gọi API:', error);
+            alert('Đã xảy ra lỗi khi gọi API. Vui lòng thử lại sau.');
+        }
+  
+    }
+
+    const filldata = async () => {
+        await fetchProducts()
+        const productDetailWrap = document.querySelector('.product-detail-wrapper');
+        console.log('fakeProducts',productDetailWrap)
+        if(fakeProducts) {
+            let price
+            let priceDiscount
+            if(fakeProducts?.DiscountPercent) {
+                priceDiscount = fakeProducts?.Price - (fakeProducts?.Price * fakeProducts?.DiscountPercent / 100)
+            }
+            productDetailWrap.innerHTML = `
+                <div class="product-detail-container">
+        <div class="product-images">
+        <div class="thumbnail-images">
+            <div class="thumbnail active">
+                <img src='${fakeProducts?.ImageUrl}' alt="Ring View 1" onclick='changeImage(this)''>
+            </div>
+        </div>
+        <div class="main-image">
+            <img id="mainImage" src='${fakeProducts?.ImageUrl}' alt="Main Ring View">
+        </div>
+    </div>
+
+
+        <div class="product-info">
+            <h2>${fakeProducts?.ProductName}</h2>
+            <div class="price">
+                ${priceDiscount 
+                    ? `<span class="current-price">${(priceDiscount*1000).toLocaleString('vi-VN')} đ</span>
+                    <span class="original-price">${(fakeProducts?.Price*1000).toLocaleString('vi-VN')} đ</span>`
+                    : `<span class="current-price">${(fakeProducts?.Price*1000).toLocaleString('vi-VN')} đ</span>`}
+            </div>
+
+            <div class="product-details">
+                <div class="detail-row">
+                    <span class="label">Mã sản phẩm</span>
+                    <span class="value">${fakeProducts?.ProductId}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Tuổi (tháng)</span>
+                    <span class="value">${fakeProducts?.NiTay}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Nguồn gốc</span>
+                    <span class="value">${fakeProducts?.KieuDang}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Đặc điểm</span>
+                    <span class="value">${fakeProducts?.KieuVienChu}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Số mũi Tiêm phòng</span>
+                    <span class="value">${fakeProducts?.KichThuocVienChu}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Others</span>
+                    <span class="value">${fakeProducts?.Others}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Giới tính</span>
+                    <span class="value">${fakeProducts?.GioiTinh}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Vận chuyển</span>
+                    <span class="value">${fakeProducts?.MauKimLoai}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Tình trạng</span>
+                    <span class="value">${fakeProducts?.DaTam}</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Giống loài</span>
+                    <span class="value">${fakeProducts?.Material?.materialName}</span>
+                </div>
+            </div>
+ <div class="detail-row">
+        <span class="label">Số lượng</span>
+        <div class="quantity-control">
+            <button class="quantity-btn decrease">-</button>
+<input type="number" class="quantity-input" value="1" min="1" step="1" id="quantity-input" readonly>
+            <button class="quantity-btn increase">+</button>
+        </div>
+    </div>
+    
+            <div class="contact-button">
+        <button class="btn-cart" id="cartButton" onclick="addCart(fakeProducts?.ProductId)">
+            <i class="fas fa-cart-arrow-down" id="cartIcon" style="font-size: 24px;"></i>
+        </button>
+        <button class="btn-favorite" id="favoriteButton">
+            <i class="far fa-heart" id="heartIcon" style="font-size: 24px;"></i>
+        </button>
+        <button class="btn-consult" onclick="handleGoToViewCart()">MUA NGAY</button>
+        
+    </div>
+
+
+    <div class="hotline">Tư vấn ngay: 0976 534 850</div>
+            
+        </div>
+    </div>
+    <div class="product-description">
+                <p>${fakeProducts?.Description}</p>
+            </div>
+
+            `
+        }
+
+        increaseQuantity()
+    }
+
+    filldata()
+
+    const increaseQuantity = async() => {
+    // Cấm nhập liệu từ bàn phím
+        document.getElementById('quantity-input').addEventListener('keydown', function(event) {
+            event.preventDefault();
+        });
+
+        // Xử lý sự kiện khi nhấn nút trừ và cộng
+        let quantityInput = document.getElementById('quantity-input');
+        let interval;
+
+        document.querySelector('.decrease').addEventListener('click', function() {
+
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+            }
+        });
+
+        document.querySelector('.increase').addEventListener('click', function() {
+            let currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+        });
+
+        // Xử lý khi giữ chuột để tăng giảm nhanh
+        document.querySelector('.decrease').addEventListener('mousedown', function() {
+            interval = setInterval(function() {
+                let currentValue = parseInt(quantityInput.value);
+                if (currentValue > 1) {
+                    quantityInput.value = currentValue - 1;
+                }
+            }, 100); // Giảm nhanh mỗi 100ms khi giữ chuột
+        });
+
+        document.querySelector('.increase').addEventListener('mousedown', function() {
+            interval = setInterval(function() {
+                let currentValue = parseInt(quantityInput.value);
+                quantityInput.value = currentValue + 1;
+            }, 100); // Tăng nhanh mỗi 100ms khi giữ chuột
+        });
+
+        // Dừng tăng giảm khi thả chuột
+        document.querySelector('.decrease').addEventListener('mouseup', function() {
+            clearInterval(interval);
+        });
+
+        document.querySelector('.increase').addEventListener('mouseup', function() {
+            clearInterval(interval);
+        });
+
+        // Dừng tăng giảm khi chuột rời khỏi nút
+        document.querySelector('.decrease').addEventListener('mouseleave', function() {
+            clearInterval(interval);
+        });
+
+        document.querySelector('.increase').addEventListener('mouseleave', function() {
+            clearInterval(interval);
+        });
+
+    }
+
+
+</script>
+
+
+<script>
+    // Hàm thay đổi ảnh chính khi click vào thumbnail
+@* function changeImage(thumbnail) {
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    
+    // Deselect tất cả các thumbnail
+    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+    
+    // Chọn thumbnail hiện tại và làm nó nổi bật
+    thumbnail.classList.add('active');
+    
+    // Cập nhật ảnh chính theo ảnh thumbnail đã chọn
+    mainImage.src = thumbnail.querySelector('img').src;
+} *@
+
+// Hàm hiển thị ảnh ngẫu nhiên khi load trang
+@* function randomizeImages() {
+    const images = [
+        "https://via.placeholder.com/600?text=Image+1",
+        "https://via.placeholder.com/600?text=Image+2",
+        "https://via.placeholder.com/600?text=Image+3",
+        "https://via.placeholder.com/600?text=Image+4",
+        "https://via.placeholder.com/600?text=Image+5"
+    ];
+    
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const mainImage = document.getElementById('mainImage');
+    mainImage.src = images[randomIndex];  // Cập nhật ảnh chính ngẫu nhiên
+} *@
+
+// Gọi hàm khi trang tải
+window.onload = function() {
+    @* randomizeImages(); *@
+};
+
+// Thêm sự kiện hover zoom cho ảnh chính
+@* const mainImage = document.getElementById('mainImage');
+mainImage.addEventListener('mousemove', function(e) {
+    const rect = mainImage.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
+    
+    // Zoom vào đúng vị trí chuột
+    mainImage.style.transformOrigin = `${(offsetX / rect.width) * 100}% ${(offsetY / rect.height) * 100}%`;
+});
+
+mainImage.addEventListener('mouseleave', function() {
+    // Khi chuột rời đi, ảnh quay lại bình thường
+    mainImage.style.transformOrigin = "center center";
+}); *@
+</script>
+
+<script>
+    // Lấy icon trái tim và thêm sự kiện khi nhấn
+    const heartIcon = document.getElementById('heartIcon');
+
+    // Thêm sự kiện click cho icon yêu thích
+    heartIcon.onclick = () => {
+        if (heartIcon.classList.contains('far')) {
+            heartIcon.classList.remove('far');
+            heartIcon.classList.add('fas'); // Đổi thành trái tim đầy
+            heartIcon.classList.add('selected'); // Thêm màu đỏ
+        } else {
+            heartIcon.classList.remove('fas');
+            heartIcon.classList.add('far'); // Quay lại trái tim rỗng
+            heartIcon.classList.remove('selected'); // Bỏ màu đỏ
+        }
+    };
+
+    // Lấy đối tượng icon cart
+    const cartButton = document.getElementById('cartButton');
+    const cartIcon = document.getElementById('cartIcon');
+
+    // Thêm sự kiện click cho icon giỏ hàng
+    cartButton.addEventListener('click', function() {
+        if (cartIcon.classList.contains('fa-cart-arrow-down')) {
+            cartIcon.classList.remove('fa-cart-arrow-down');
+            cartIcon.classList.add('fa-shopping-cart'); // Chuyển sang giỏ hàng đầy (fa-shopping-cart)
+            cartIcon.classList.add('selected'); // Thêm màu đỏ
+        } else {
+            cartIcon.classList.remove('fa-shopping-cart');
+            cartIcon.classList.add('fa-cart-arrow-down'); // Quay lại giỏ hàng xuống (fa-cart-arrow-down)
+            cartIcon.classList.remove('selected'); // Bỏ màu đỏ
+        }
+    });
+</script>
+
+<script>
+function changeImage(element) {
+    document.getElementById('mainImage').src = element.src;
+    
+    // Remove active class from all thumbnails
+    document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+    });
+    
+    // Add active class to clicked thumbnail
+    element.parentElement.classList.add('active');
+}
+</script>
+<div class="coTheBanSeThich">
+			<div class="coTheBanSeThich-header">
+				<div class="coTheBanSeThich-tieuDe">Có thể bạn sẽ thích</div>
+				<div class="coTheBanSeThich-xemThem">Xem thêm &gt;</div>
+			</div>
+			<div class="coTheBanSeThich-content">
+				<button class="btn-prev" onclick="slideLeft()">&#8249;</button>
+				<div class="coTheBanSeThich-slider" id="slider">
+					<img class="coTheBanSeThich-item" src="/images/suggest1.png" alt="Ảnh 1">
+					<img class="coTheBanSeThich-item" src="/images/suggest2.jpg" alt="Ảnh 2">
+					<img class="coTheBanSeThich-item" src="/images/suggest3.jpg" alt="Ảnh 3">
+					<img class="coTheBanSeThich-item" src="/images/suggest4.jpeg" alt="Ảnh 4">
+					<img class="coTheBanSeThich-item" src="/images/suggest5.jpg" alt="Ảnh 5">
+					<img class="coTheBanSeThich-item" src="/images/suggest6.jpg" alt="Ảnh 6">
+					<img class="coTheBanSeThich-item" src="/images/suggest7.jpg" alt="Ảnh 7">
+					<img class="coTheBanSeThich-item" src="/images/suggest8.jpg" alt="Ảnh 8">
+					<img class="coTheBanSeThich-item" src="/images/suggest9.jpg" alt="Ảnh 9">
+					<img class="coTheBanSeThich-item" src="/images/suggest10.jpg" alt="Ảnh 10">
+					<img class="coTheBanSeThich-item" src="/images/suggest11.jpg" alt="Ảnh 11">
+					<img class="coTheBanSeThich-item" src="/images/suggest12.png" alt="Ảnh 12">
+					<img class="coTheBanSeThich-item" src="/images/suggest13.jpg" alt="Ảnh 13">
+					<img class="coTheBanSeThich-item" src="/images/suggest14.jpg" alt="Ảnh 14">
+					<img class="coTheBanSeThich-item" src="/images/suggest15.jpg" alt="Ảnh 15">
+					<img class="coTheBanSeThich-item" src="/images/suggest16.jpg" alt="Ảnh 16">
+					<img class="coTheBanSeThich-item" src="/images/suggest17.jpg" alt="Ảnh 17">
+					<img class="coTheBanSeThich-item" src="/images/suggest18.jpg" alt="Ảnh 18">
+				</div>
+				<button class="btn-next" onclick="slideRight()">&#8250;</button>
+			</div>
+			<script src="/js/suggest.js"></script>
+		</div>
+
+
