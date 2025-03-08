@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using _123.Helpers;
-using _123.Models
+using _123.Models;
 using MySql.Data.MySqlClient;
 
 namespace _123.Services
