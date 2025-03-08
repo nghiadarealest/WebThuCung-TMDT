@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using _123.Helpers;
 using _123.Models;
-using MySql.Data.MySqlClient;
+using MySql.Data.MySqlClient
 
 namespace _123.Services
 {
