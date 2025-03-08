@@ -62,7 +62,7 @@
 .handk-icon {
   width: 80px !important;
   height: 60px !important;
-  margin-left: 282.5px;
+  margin-left: 0px;
   margin-right: auto; /* Để căn giữa */
 }
 .handk-icon1 {
@@ -608,11 +608,11 @@ input[type="range"] {
 }
 
 /* Logo HanDK */
-.handk-footer-icon {
+.pnp-footer-icon {
   border-radius: 30px;
   width: 240px; /* Kích thước logo */
   height: 180px;
-  margin-left: 240px;
+  margin-left: 140px;
   margin-right: 75px;
 }
 
