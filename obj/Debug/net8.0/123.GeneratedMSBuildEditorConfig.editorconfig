@@ -1,0 +1,467 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = _123
+build_property.RootNamespace = _123
+build_property.ProjectDir = C:\Users\Admin\Desktop\WebThuCung-TMDT\PJ_TMDT-master\PJ_TMDT-master\123\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Admin\Desktop\WebThuCung-TMDT\PJ_TMDT-master\PJ_TMDT-master\123
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/account/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/account/signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcYWNjb3VudFxzaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/categories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY2F0ZWdvcmllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/categoryadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY2F0ZWdvcnlhZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/categorydelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY2F0ZWdvcnlkZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/categoryedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY2F0ZWdvcnllZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/discountadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cZGlzY291bnRhZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/discountdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cZGlzY291bnRkZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/discountedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cZGlzY291bnRlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/discounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cZGlzY291bnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/inventories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW52ZW50b3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/inventoryadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW52ZW50b3J5YWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/inventorydelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW52ZW50b3J5ZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/inventoryedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caW52ZW50b3J5ZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/materialadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbWF0ZXJpYWxhZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/materialdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbWF0ZXJpYWxkZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/materialedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbWF0ZXJpYWxlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/materials.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbWF0ZXJpYWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJhZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJkZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderitem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJpdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderitemadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJpdGVtYWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderitemdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJpdGVtZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderitemedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJpdGVtZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderpayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJwYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderpaymentadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJwYXltZW50YWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderpaymentdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJwYXltZW50ZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/orderpaymentedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cb3JkZXJwYXltZW50ZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/paymentmethod.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGF5bWVudG1ldGhvZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/paymentmethodadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGF5bWVudG1ldGhvZGFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/paymentmethoddelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGF5bWVudG1ldGhvZGRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/paymentmethodedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGF5bWVudG1ldGhvZGVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdetailadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRldGFpbGFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdetaildelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRldGFpbGRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdetailedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRldGFpbGVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdiscountadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRpc2NvdW50YWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdiscountdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRpc2NvdW50ZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdiscountedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRpc2NvdW50ZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productdiscounts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGRpc2NvdW50cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdGVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productsupplieradd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdHN1cHBsaWVyYWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productsupplierdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdHN1cHBsaWVyZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productsupplieredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdHN1cHBsaWVyZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/productsuppliers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdHN1cHBsaWVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/reviewadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccmV2aWV3YWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/reviewdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccmV2aWV3ZGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/reviewedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccmV2aWV3ZWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/roleadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccm9sZWFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/roledelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccm9sZWRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/roleedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccm9sZWVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/roles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccm9sZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/shoppingCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc2hvcHBpbmdDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/shoppingCartAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc2hvcHBpbmdDYXJ0QWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/shoppingCartDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc2hvcHBpbmdDYXJ0RGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/shoppingCartEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc2hvcHBpbmdDYXJ0RWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/supplieradd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc3VwcGxpZXJhZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/supplierdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc3VwcGxpZXJkZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/supplieredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc3VwcGxpZXJlZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/suppliers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc3VwcGxpZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/transactionadd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdHJhbnNhY3Rpb25hZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/transactiondelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdHJhbnNhY3Rpb25kZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/transactionedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdHJhbnNhY3Rpb25lZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/TransactionHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHJhbnNhY3Rpb25IaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/useradd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdXNlcmFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/userdelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdXNlcmRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/useredit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdXNlcmVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Admin/users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/CauChuyenPNP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXVDaHV5ZW5QTlAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/ChinhSachBaoMatThongTin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGluaFNhY2hCYW9NYXRUaG9uZ1Rpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/ChinhSachThanhToan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGluaFNhY2hUaGFuaFRvYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/ChinhSachThuHoiVaDoiTra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGluaFNhY2hUaHVIb2lWYURvaVRyYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/CuaHangHanDK.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdWFIYW5nSGFuREsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/GiaVang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaWFWYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/HuongDanDoSize.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIdW9uZ0RhbkRvU2l6ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/KhuyenMai.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxLaHV5ZW5NYWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/Momopayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb21vcGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/orderPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxvcmRlclBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/paymentSuccessful.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwYXltZW50U3VjY2Vzc2Z1bC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/qrcodepayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxxcmNvZGVwYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/thongtin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0aG9uZ3Rpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/transactionHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0cmFuc2FjdGlvbkhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/UserInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VySW5mby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/Vnpaypayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWbnBheXBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/YeuThich.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxZZXVUaGljaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Home/Zalopayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxaYWxvcGF5bWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Payment/MomoPaymentCallBack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxNb21vUGF5bWVudENhbGxCYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Payment/qrcode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxxcmNvZGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Payment/VNPayPaymentCallback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxWTlBheVBheW1lbnRDYWxsYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Shared/_LoginPopup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBvcHVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Desktop/WebThuCung-TMDT/PJ_TMDT-master/PJ_TMDT-master/123/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-6e7782bk76
